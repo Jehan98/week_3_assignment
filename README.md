@@ -36,34 +36,16 @@ transformers for loading and using the TableTransformerForObjectDetection model.
 Pillow for image manipulation.
 paddleocr for text recognition (OCR) from images.
 
-###Usage
+### Usage
 
 1. Prepare the Images
 Place your table images in a folder (e.g., images/). The images should be in one of the supported formats: .png, .jpg, or .jpeg.
 
 2. Run the Script
-The main script extracts text from tables in images and saves it as a CSV file. You can run the script as follows:
+The main script extracts text from tables in images and saves it as a CSV file.
 
-bash
-Copy code
-python extract_table_text.py
-Make sure to modify the script with the path to your images folder (images_path) and your desired output CSV file path (output_csv_path).
+### How It Works
 
-3. Example Directory Structure
-graphql
-Copy code
-table-text-extraction/
-│
-├── extract_table_text.py  # Main script
-├── images/                # Directory with table images
-│   ├── table1.jpg
-│   ├── table2.png
-│   └── ...
-└── extracted_table_data.csv  # Output CSV file (generated after running the script)
-4. Customization
-You can adjust the ts_thresh parameter inside the script to set the detection threshold for table rows and columns.
-Modify the output_csv_path variable in the script to specify where the CSV output should be saved.
-How It Works
 Detecting Table Structure:
 
 The TableTransformerForObjectDetection model detects rows and columns in the table image.
